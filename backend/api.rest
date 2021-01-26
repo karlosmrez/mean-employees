@@ -1,0 +1,31 @@
+### Read all employees
+GET http://localhost:4000/api/employees
+Accept: application/json
+
+### Read only one employee
+GET http://localhost:4000/api/employees/6010231a13b18e4ae09e727e
+Accept: application/json
+
+### Create new employee
+POST http://localhost:4000/api/employees
+Content-Type: application/json
+
+{
+    "name": "Ryan Ray",
+    "position": "Snr. Developer",
+    "office": "Rome",
+    "salary": "22000"
+}
+
+### Delete employee
+DELETE http://localhost:4000/api/employees/6010231a13b18e4ae09e727e
+
+### Update employee
+PUT http://localhost:4000/api/employees/6010231a13b18e4ae09e727e
+Content-Type: application/json
+
+{
+    "salary": "243000"
+}
+
+###
