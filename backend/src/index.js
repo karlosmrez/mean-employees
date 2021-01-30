@@ -1,5 +1,9 @@
-require('./database');
-const app = require('./app');
+// Load environment variables (.env file)
+require('dotenv').config();
 
-app.listen(app.get('port'));
-console.log('Server on port', app.get('port'));
+const app = require('./server');
+require('./database');
+
+app.listen(app.get('port'), () => {
+    console.log('Server on port', app.get('port'));
+});
